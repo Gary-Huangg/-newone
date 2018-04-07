@@ -1,0 +1,165 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
+body{
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	background-image: url(img/background.jpg);
+	font-family: "微软雅黑";
+}
+header{
+	width: 100%;
+}
+header>p{
+	font-size: 30px;
+	font-weight: 600;
+	text-align: center;
+}
+.logo{
+	width: 100%;
+	display: -webkit-flex;
+	align-items: center;
+	margin-top: 10px;
+}
+.logo>div{
+	flex: 1;
+}
+.logo>img{
+	flex: 1;
+	width: 21%;
+}
+.text{
+	width: 100%;
+	display: -webkit-flex;
+	align-items: center;
+	margin-top: 105px;
+	/* margin-bottom: 10px; */
+}
+.text>div{
+	flex: 1;
+}
+.text>img{
+	flex: 1;
+	width: 60%;
+}
+.content{
+	display: -webkit-flex;
+	flex-direction: column;
+	/*align-items: center;*/
+	width: 300px;
+	height: 315px;
+	/*background-color: yellow;*/
+	margin:auto;
+	margin-top: 1px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	font-size: 20px;
+	font-weight: 600;
+	/* padding-left: 50px; */
+}
+.Brief_information{
+	width: 65%;
+	height: 60px;
+	float: left;
+	color: #3a6a90;
+	font-weight: 600;
+}
+.when{
+
+}
+.time{
+	
+margin-top: 8px;
+}
+.xingxi{
+	height: 58px;
+	font-size: 17px;
+	width: 100%;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	/* display: -webkit-flex; */
+	/* flex-direction: column; */
+	/* align-items: center; */
+}
+.button{
+	margin-top: 20px;
+	display: -webkit-flex;
+	justify-content: space-around;
+}
+.btn{
+	width: 105px;
+	height: 36px;
+	border: 0px;
+	border-radius: 50px;
+	background-color: #8ebcd8;
+	text-align: center;
+	font-weight: 600;
+	font-size: 20px;
+	color:#3a6a90;
+}
+.btn-down{
+	width: 120px;
+	height: 50px;
+	border: 0px;
+	border-radius: 50px;
+	background-color: #8ebcd8;
+	text-align: center;
+	font-weight: 600;
+	font-size: 31px;
+	color:#3a6a90;
+}
+.Detailed_information_button{
+	width: 35%;
+	height: 59px;
+	float: right;
+	line-height: 59px;
+}
+footer{
+	width: 100%;
+	color:#a2a1a4;
+	position: absolute;
+	bottom: 5px;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 600;
+}
+@media screen and (min-height:700px) {
+		.text{
+			width: 100%;
+			display: -webkit-flex;
+			align-items: center;
+			margin-top: 130px;
+		}
+}
+
+
+@media screen and (min-height:900px) {
+		.text{
+			width: 100%;
+			display: -webkit-flex;
+			align-items: center;
+			margin-top: 220px;
+		}
+}
+@media screen and (min-height:1100px) {
+		.text{
+			width: 100%;
+			display: -webkit-flex;
+			align-items: center;
+			margin-top: 280px;
+		}
+		footer {
+		    width: 100%;
+		    color: #a2a1a4;
+		    position: absolute;
+		    bottom: 5px;
+		    text-align: center;
+		    font-size: 20px;
+		    font-weight: 600;
+		}
+}
+ 		
+
