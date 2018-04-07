@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>主页</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width" initial-scale="1">
+	<link rel="stylesheet" type="text/css" href="text.css">
+	<script type="text/javascript" src="../jquery-2.1.1.min.js"></script>	
+<!-- 	<script type="text/javascript" src="js.js"></script> -->
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<div></div>
+			<img src="img/logo.png">
+			<div></div>
+		</div>
+		<div class="text">
+			<div></div>
+			<img src="img/text-bgs.png">
+			<div></div>
+		</div>
+	</header>
+	<div class="content">
+		<div class="xingxi">
+			<div class="Brief_information">
+				<div id="when" class="when">日期：2017-6-3</div>
+				<div id="who" class="time">19:20---20:20</div>
+			</div>
+			<div class="Detailed_information_button">
+				<input   class="btn" type="button"  value="详细信息" onclick="queryById('{$vo.id}')">
+			</div>
+		</div>
+	</div>
+	<div class="button">
+<!-- 		<input id="Check" class="btn-down" type="button"  value="预约查看" name=""> -->
+		<input id="yuyue" class="btn-down" type="button"  value="预约" name="">
+	</div>
+	<footer>Copyright © 2006-2017</footer>
+</body>
+</html>
