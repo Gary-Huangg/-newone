@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>我要预约</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width" initial-scale="1">
+	<link rel="stylesheet" type="text/css" href="text.css">
+	<script type="text/javascript" src="../jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js.js"></script>
+</head>
+<body> 
+	<header>
+		<div class="logo">
+			<div></div>
+			<img src="img/logo.png">
+			<div></div>
+		</div>
+		<div class="text">
+			<div></div>
+			<img src="img/text-bgs.png">
+			<div></div>
+		</div>
+	</header>
+	<div class="content">
+		<div  class="name flex">
+			<input value="" id="name" class="input" type="text" placeholder="姓名">
+		</div>
+		<div  class="zhongxing flex">
+			<select id="department" style="width: 100%;"  class="select-style" onChange="selectChange()">
+				<option value="1" selected="selected" style="font-weight: 100;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中心方向</option>
+				<option class="select-style-in" value="策划-xxx">文化传媒中心-视频</option>
+				<option class="select-style-in" value="策划-xxx">文化传媒中心-视觉</option>
+				<option class="select-style-in" value="策划-xxx">文化传媒中心-摄影</option>
+				<option class="select-style-in" value="策划-xxx">运营策划中心-产品</option>
+				<option class="select-style-in" value="策划-xxx">运营策划中心-策划</option>
+				<option class="select-style-in" value="策划-xxx">运营策划中心-自媒体</option>
+				<option class="select-style-in" value="策划-xxx">技术研发中心-Web前端</option>
+				<option class="select-style-in" value="策划-xxx">技术研发中心-Web后端</option>
+				<option class="select-style-in" value="策划-xxx">技术研发中心-iOS</option>
+				<option class="select-style-in" value="策划-xxx">技术研发中心-Android</option>
+			</select>
+		</div>
+		<div class="name flex">
+			<input  id="phone" class="input" type="text" placeholder="电话">
+		</div>
+		<div  class="mark flex">
+			<input id="mark" class="input" type="text" placeholder="标识符号">
+		</div>
+		<div  class="mark flex">
+			<input id="use" class="input" type="text" placeholder="用途">
+		</div>
+	</div>
+	<div  class="button">
+		<input class="btn" type="button"  id="next" value="确定预约">
+	</div>
+	<footer>Copyright © 2006-2018</footer>
+</body>
+</html>

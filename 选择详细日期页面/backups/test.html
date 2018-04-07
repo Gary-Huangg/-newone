@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for-test</title>
+ 	<meta name="viewport" content="width=device-width" initial-scale="1">
+	<link rel="stylesheet" type="text/css" href="css-test.css">
+	<link rel="stylesheet" type="text/css" href="mobileSelect.css">
+	<!-- <link rel="stylesheet" type="text/css" href="public.css"> -->
+	<title>选择详细日期</title>
+    <script src="jquery-2.1.1.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <div></div>
+            <img src="img/logo.png">
+            <div></div>
+        </div>
+    </header>
+    <input type="text" class="datepicker" placeholder="点击选择日期">
+    <div id="trigger_Location">选择地点</div>        
+	<script src="js-test.js"></script>
+            <div class="Detailed_time">
+                <div class="Detailed_time_text">预定时间段：</div>
+                <div class="Start_time">
+                	<div class="Start_time_test">起始时间： </div>
+                    <div id="trigger_Start">选择时间</div>
+                </div>
+                <div class="End_time">
+                	<div class="End_time_test">结束时间：</div>
+                   		<div id="trigger_End">选择时间</div>		
+                </div>
+                <div class="Thedownwhite"></div>
+            </div>
+            <div  class="ConfirmButton">
+                    <input class="btn" type="button"  id="next" value="确定预约">
+            </div>
+           
+    <script src="mobileSelect.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+var timeArr = ['08:30','09:00','09:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30','18:00','18:30','19:00','19:30','20:00','20:30','21:00'];
+
+var Location = ['办公室','8楼茶水间','7楼茶水间','6楼茶水间'];
+
+var mobileSelect1 = new MobileSelect({
+    trigger: '#trigger_Start',
+    title: '开始时间选择',
+    wheels: [
+                {data: timeArr}
+            ],
+    position:[2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+    transitionEnd:function(indexArr, data){
+        //console.log(data);
+    },
+    callback:function(indexArr, data){
+        console.log(data);
+    }
+});
+
+var mobileSelect2 = new MobileSelect({
+    trigger: '#trigger_End',
+    title: '结束时间选择',
+    wheels: [
+                {data: timeArr}
+            ],
+    position:[2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+    transitionEnd:function(indexArr, data){
+        //console.log(data);
+    },
+    callback:function(indexArr, data){
+        console.log(data);
+    }
+});
+
+var mobileSelect3 = new MobileSelect({
+    trigger: '#trigger_Location',
+    title: '地点选择',
+    wheels: [
+                {data: Location}
+            ],
+    position:[2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+    transitionEnd:function(indexArr, data){
+        //console.log(data);
+    },
+    callback:function(indexArr, data){
+        console.log(data);
+    }
+});
+
+</script>
+    
+<footer>Copyright © 2006-2018</footer>
+</body>
+</html>
+

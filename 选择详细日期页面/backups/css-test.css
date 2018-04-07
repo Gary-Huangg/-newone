@@ -1,0 +1,722 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-image: url(img/bground.jpg);
+    font-family: "Ã¥Â¾Â®Ã¨Â½Â¯Ã©â€ºâ€¦Ã©Â»â€˜";
+}
+header{
+    width: 100%;
+}
+header>p{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+.logo{
+    width: 50%;
+    display: -webkit-flex;
+    align-items: center;
+    margin-top: 10px;
+    position: absolute;
+    left: 25%;
+}
+.logo>div{
+    flex: 1;
+}
+.logo>img{
+    flex: 1;
+    width: 21%;
+}
+.datepicker{
+    display: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 50px;
+    line-height: 24px;
+    padding: 0 5px;
+    width: 230px;
+    cursor: pointer;
+    margin-top: 120px;
+}
+.datepicker:focus{
+    outline: none;
+    border-color: #1abc9c;
+}
+.date-wrap{
+    display: block;
+    position: absolute;
+    /* z-index: 2147483646; */
+    width: 100%;
+    /* background: white; */
+    color: #666;
+    font-size: 16px;
+    /* box-shadow:  2px 2px 8px 2px rgba(128,128,128,.3); */
+    /* width: 300px; */
+    height: 450px;
+    border-radius: 5%;
+    /* border: 1px solid #ccc; */
+    overflow: hidden;
+    margin-top: 86px;
+}
+.date-wrap.active{
+    display: block;
+}
+.date-wrap .date-header{
+    /* padding: 0 20px; */
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    /* background: #f0f0f0; */
+    /* border-bottom: 1px solid #ccc; */
+    font-weight: bold;
+    width: 93%;
+    margin: auto;
+}
+.date-wrap .date-btn{
+    font-family: serif;
+    font-size: 20px;
+    width: 44px;
+    height: 50px;
+    font-weight: 600;
+    line-height: 50px;
+    color: #1d5a99;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+.date-wrap .date-btn.date-btn-prev{
+    float: left;
+    /* margin-left: 20px; */
+}
+.date-wrap .date-btn.date-btn-next{
+    float: left;
+}
+.date-wrap .date-body table{
+    width: 100%;
+    border-collapse: collapse;
+    color: #1d5a99;
+}
+.date-wrap .date-body table th,
+.date-wrap .date-body table td{
+    height: 44px;
+    text-align: center;
+}
+.date-wrap .date-body table th{
+    font-size: 12px;
+    height: 50px;
+    line-height: 40px;
+}
+.date-wrap .date-body table td{
+    /* border: 1px solid #f0f0f0; */
+    font-size: 16px;
+    width: 14%;
+    cursor: pointer;
+    font-weight: bold;
+}
+.date-wrap .date-body table td.not{
+    color: #ccc;
+        font-weight: normal;
+}
+.date-thead{
+    background-color: rgba(166,206,226,0.8);
+    border-radius: 50px;
+}
+.calendar-contain{
+    width: 100%;
+    height: 504px;
+    border-radius: 5%;
+    /* border: 1px solid #ccc; */
+    background-color: rgba(0,0,0,0);
+}
+.calendar-contain-in{
+    width: 93%;
+    height: 317px;
+    /* margin: auto; */
+    margin-left: 4%;
+    border-radius: 30px 30px 0px 0px;
+    /* border: 1px solid #ccc; */
+    overflow: hidden;
+}
+.td-active{
+    border: 2px solid red;
+    font-size: 10px;
+    width: 14%;
+    cursor: pointer;
+    font-weight: bold;
+}
+.onClickChange{
+    background:url(img/date-bg.jpg);
+    background-size: 100% 100%;
+}
+.onClickChange-off{
+    
+}
+#trigger_Location{
+    color: 1d5a99;
+    color: #1d5a99;
+    width: 30%;
+    /* float: right; */
+    height: 50px;
+    position: absolute;
+    right: 8%;
+    top: 86px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 50px;
+    z-index: 6;
+}
+.date-btn-for-loction{
+   font-family: serif;
+    font-size: 20px;
+    width: 44px;
+    height: 50px;
+    line-height: 50px;
+    color: #1abc9c;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+.locationonname{
+    font-family: serif;
+    font-size: 20px;
+    width: 69px;
+    height: 50px;
+    line-height: 50px;
+    color: #1d5a99;
+    /* text-align: center; */
+    /* cursor: pointer; */
+    /* text-decoration: none; */
+    display: block;
+    /* float: left; */
+    position: absolute;
+    left: 39%;
+}
+.selecclass{
+
+display: block;
+
+float: left;
+
+width: 76px;
+
+border: none;
+
+line-height: 30px;
+
+height: 48px;
+}
+.tbodyclass{
+    background-color: rgba(184,213,228,0.8);
+}
+.Detailed_time{
+
+width: 93%;
+
+height: 167px;
+
+padding-top: 5px;
+
+/* margin: auto auto; */
+
+margin-left: 4%;
+
+top: 450px;
+
+color: #1d5a99;
+
+font-weight: 600;
+
+float: left;
+
+position: absolute;
+
+z-index: 0;
+
+background: rgba(184,213,228,0.8);
+
+/* border: 1px solid #ccc; */
+
+/* border-radius: 17px; */
+
+border-radius: 0 0 30px 30px;
+
+/* display: inline; */
+
+overflow: hidden;
+}
+.Detailed_time_text{
+
+width: 80%;
+
+margin-left: 8%;
+
+font-size: 21px;
+}
+.Start_time_test{
+    float: left;
+    /* margin-left: 83px; */
+}
+.End_time{
+    
+/* margin-top: 20px; */
+    
+/* margin-left: 50px; */
+    
+margin-top: 20px;
+    
+margin-left: 20%;
+    
+font-size: 19px;
+}
+.End_time_test{ 
+    float: left;
+}
+.Start_time{
+
+margin-top: 20px;
+
+margin-left: 20%;
+
+font-size: 19px;
+}
+.Start_time_left{
+
+}
+.Start_time_right{
+    
+}
+.Start_time_time{
+
+}
+.ConfirmButton{
+    /* width: 28%; */
+    /* height: 40px; */
+    /* margin-left: 35%; */
+    /* bottom: -23px; */
+    /* color: red; */
+    /* font-weight: 600; */
+    /* float: left; */
+    /* position: absolute; */
+    /* z-index: 3; */
+    /* background: white; */
+    /* border-radius: 50px; */
+    width: 92%;
+    height: 40px;
+    margin-left: 4%;
+    top: 605px;
+    /* color: #1d5a99; */
+    font-weight: 600;
+    float: left;
+    position: absolute;
+    z-index: 2;
+    /* background: #a3d0ff; */
+    /* border: 1px solid #ccc; */
+    /* border-radius: 17px; */
+    /* display: inline; */
+    /* overflow: hidden; */
+}
+.btn{
+    width: 30%;
+    height: 100%;
+    border: 0px;
+    margin-left: 35%;
+    border-radius: 50px;
+    background-color: #1d5a99;
+    font-weight: 600;
+    font-size: 16px;
+    color: #b7d5e4;
+}
+.Thedownwhite{
+
+width: 33%;
+
+height: 46px;
+
+background: white;
+
+/* border: 1px solid #fffdff; */
+
+border-radius: 70px;
+
+margin-left: 33%;
+
+position: absolute;
+
+bottom: -22px;
+}
+
+footer{
+    width: 100%;
+    color:#a2a1a4;
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+
+
+ @media screen and (max-height:700px) and (min-height:600px) {
+    .date-wrap .date-body table th, .date-wrap .date-body table td {
+        height: 38px;
+        text-align: center;
+    }
+    .Detailed_time {
+        width: 93%;
+        height: 167px;
+        padding-top: 5px;
+        /* margin: auto auto; */
+        margin-left: 4%;
+        top: 404px;
+        color: #1d5a99;
+        font-weight: 600;
+        float: left;
+        position: absolute;
+        z-index: 0;
+        background: rgba(184,213,228,0.8);
+        /* border: 1px solid #ccc; */
+        /* border-radius: 17px; */
+        border-radius: 0 0 30px 30px;
+        /* display: inline; */
+        overflow: hidden;
+    }
+    .ConfirmButton {
+        /* width: 28%; */
+        /* height: 40px; */
+        /* margin-left: 35%; */
+        /* bottom: -23px; */
+        /* color: red; */
+        /* font-weight: 600; */
+        /* float: left; */
+        /* position: absolute; */
+        /* z-index: 3; */
+        /* background: white; */
+        /* border-radius: 50px; */
+        width: 92%;
+        height: 40px;
+        margin-left: 4%;
+        top: 557px;
+        /* color: #1d5a99; */
+        font-weight: 600;
+        float: left;
+        position: absolute;
+        z-index: 2;
+        /* background: #a3d0ff; */
+        /* border: 1px solid #ccc; */
+        /* border-radius: 17px; */
+        /* display: inline; */
+        /* overflow: hidden; */
+    }
+ }
+
+ 
+
+ @media screen and (max-height:600px) and (min-height:500px){
+    .date-wrap .date-body table th, .date-wrap .date-body table td {
+        height: 30px;
+        text-align: center;
+    }
+    .Detailed_time {
+        width: 93%;
+        height: 156px;
+        padding-top: 5px;
+        /* margin: auto auto; */
+        margin-left: 4%;
+        top: 356px;
+        color: #1d5a99;
+        font-weight: 600;
+        float: left;
+        position: absolute;
+        z-index: 0;
+        background: rgba(184,213,228,0.8);
+        /* border: 1px solid #ccc; */
+        /* border-radius: 17px; */
+        border-radius: 0 0 30px 30px;
+        /* display: inline; */
+        overflow: hidden;
+    }
+    .ConfirmButton {
+        /* width: 28%; */
+        /* height: 40px; */
+        /* margin-left: 35%; */
+        /* bottom: -23px; */
+        /* color: red; */
+        /* font-weight: 600; */
+        /* float: left; */
+        /* position: absolute; */
+        /* z-index: 3; */
+        /* background: white; */
+        /* border-radius: 50px; */
+        width: 92%;
+        height: 40px;
+        margin-left: 4%;
+        top: 498px;
+        /* color: #1d5a99; */
+        font-weight: 600;
+        float: left;
+        position: absolute;
+        z-index: 2;
+        /* background: #a3d0ff; */
+        /* border: 1px solid #ccc; */
+        /* border-radius: 17px; */
+        /* display: inline; */
+        /* overflow: hidden; */
+    }
+    footer{
+        width: 100%;
+        color:#a2a1a4;
+        position: absolute;
+        bottom: 5px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 600;
+    }
+ }
+
+
+
+
+ @media screen and (max-height:500px) {
+    .date-wrap .date-body table th, .date-wrap .date-body table td {
+        height: 30px;
+        text-align: center;
+    }
+    .Detailed_time {
+        width: 93%;
+        height: 156px;
+        padding-top: 5px;
+        /* margin: auto auto; */
+        margin-left: 4%;
+        top: 356px;
+        color: #1d5a99;
+        font-weight: 600;
+        float: left;
+        position: absolute;
+        z-index: 0;
+        background: rgba(184,213,228,0.8);
+        /* border: 1px solid #ccc; */
+        /* border-radius: 17px; */
+        border-radius: 0 0 30px 30px;
+        /* display: inline; */
+        overflow: hidden;
+    }
+    .ConfirmButton {
+        /* width: 28%; */
+        /* height: 40px; */
+        /* margin-left: 35%; */
+        /* bottom: -23px; */
+        /* color: red; */
+        /* font-weight: 600; */
+        /* float: left; */
+        /* position: absolute; */
+        /* z-index: 3; */
+        /* background: white; */
+        /* border-radius: 50px; */
+        width: 92%;
+        height: 40px;
+        margin-left: 4%;
+        top: 498px;
+        /* color: #1d5a99; */
+        font-weight: 600;
+        float: left;
+        position: absolute;
+        z-index: 2;
+        /* background: #a3d0ff; */
+        /* border: 1px solid #ccc; */
+        /* border-radius: 17px; */
+        /* display: inline; */
+        /* overflow: hidden; */
+    }
+    footer{
+        width: 100%;
+        color:#a2a1a4;
+        position: absolute;
+        bottom: -85px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
+
+@media screen and (min-height:800px) {
+    .date-wrap {
+        display: block;
+        position: absolute;
+        /* z-index: 2147483646; */
+        width: 100%;
+        /* background: white; */
+        color: #666;
+        font-size: 16px;
+        /* box-shadow: 2px 2px 8px 2px rgba(128,128,128,.3); */
+        /* width: 300px; */
+        height: 450px;
+        border-radius: 5%;
+        /* border: 1px solid #ccc; */
+        overflow: hidden;
+        margin-top: 160px;
+    }
+    .calendar-contain-in {
+        width: 93%;
+        height: 335px;
+        /* margin: auto; */
+        margin-left: 4%;
+        border-radius: 30px 30px 0px 0px;
+        /* border: 1px solid #ccc; */
+        overflow: hidden;
+    }
+    #trigger_Location {
+        color: 1d5a99;
+        color: #1d5a99;
+        width: 30%;
+        /* float: right; */
+        height: 50px;
+        position: absolute;
+        right: 8%;
+        top: 160px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 50px;
+        z-index: 6;
+    }
+    .Detailed_time {
+        width: 93%;
+        height: 167px;
+        padding-top: 5px;
+        /* margin: auto auto; */
+        margin-left: 4%;
+        top: 523px;
+        color: #1d5a99;
+        font-weight: 600;
+        float: left;
+        position: absolute;
+        z-index: 0;
+        background: rgba(184,213,228,0.8);
+        /* border: 1px solid #ccc; */
+        /* border-radius: 17px; */
+        border-radius: 0 0 30px 30px;
+        /* display: inline; */
+        overflow: hidden;
+    }
+    .ConfirmButton {
+        /* width: 28%; */
+        /* height: 40px; */
+        /* margin-left: 35%; */
+        /* bottom: -23px; */
+        /* color: red; */
+        /* font-weight: 600; */
+        /* float: left; */
+        /* position: absolute; */
+        /* z-index: 3; */
+        /* background: white; */
+        /* border-radius: 50px; */
+        width: 92%;
+        height: 40px;
+        margin-left: 4%;
+        top: 679px;
+        /* color: #1d5a99; */
+        font-weight: 600;
+        float: left;
+        position: absolute;
+        z-index: 2;
+        /* background: #a3d0ff; */
+        /* border: 1px solid #ccc; */
+        /* border-radius: 17px; */
+        /* display: inline; */
+        /* overflow: hidden; */
+    }
+}
+//
+@media screen and (min-width: 1100px) {
+    .date-wrap {
+        display: block;
+        position: absolute;
+        /* z-index: 2147483646; */
+        width: 100%;
+        /* background: white; */
+        color: #666;
+        font-size: 16px;
+        /* box-shadow: 2px 2px 8px 2px rgba(128,128,128,.3); */
+        /* width: 300px; */
+        height: 450px;
+        border-radius: 5%;
+        /* border: 1px solid #ccc; */
+        overflow: hidden;
+        margin-top: 160px;
+    }
+    .calendar-contain-in {
+        width: 93%;
+        height: 335px;
+        /* margin: auto; */
+        margin-left: 4%;
+        border-radius: 30px 30px 0px 0px;
+        /* border: 1px solid #ccc; */
+        overflow: hidden;
+    }
+    #trigger_Location {
+        color: 1d5a99;
+        color: #1d5a99;
+        width: 30%;
+        /* float: right; */
+        height: 50px;
+        position: absolute;
+        right: 8%;
+        top: 160px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 50px;
+        z-index: 6;
+    }
+    .Detailed_time {
+        width: 93%;
+        height: 167px;
+        padding-top: 5px;
+        /* margin: auto auto; */
+        margin-left: 4%;
+        top: 527px;
+        color: #1d5a99;
+        font-weight: 600;
+        float: left;
+        position: absolute;
+        z-index: 0;
+        background: rgba(184,213,228,0.8);
+        /* border: 1px solid #ccc; */
+        /* border-radius: 17px; */
+        border-radius: 0 0 30px 30px;
+        /* display: inline; */
+        overflow: hidden;
+    }
+    .ConfirmButton {
+        /* width: 28%; */
+        /* height: 40px; */
+        /* margin-left: 35%; */
+        /* bottom: -23px; */
+        /* color: red; */
+         font-weight: 600; 
+        /* float: left; */
+        /* position: absolute; */
+        /* z-index: 3; */
+        /* background: white; */
+        /* border-radius: 50px; */
+        width: 92%;
+        height: 40px;
+        margin-left: 4%;
+        top: 679px;
+        /* color: #1d5a99; */
+        font-weight: 600;
+        float: left;
+        position: absolute;
+        z-index: 2;
+        /* background: #a3d0ff; */
+        /* border: 1px solid #ccc; */
+        /* border-radius: 17px; */
+        /* display: inline; */
+        /* overflow: hidden; */
+    }
+}
